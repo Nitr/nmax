@@ -1,36 +1,39 @@
-# Nmax
+[![Build Status](https://travis-ci.org/Nitr/nmax.svg?branch=master)](https://travis-ci.org/Nitr/nmax)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nmax`. To experiment with that code, run `bin/console` for an interactive prompt.
+# NMax #
 
-TODO: Delete this and the text above, and describe your gem
+## Installation ##
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'nmax'
+```
+~ $ gem install nmax-nitr
 ```
 
-And then execute:
+## Usage ##
 
-    $ bundle
+```
+~ $ cat sample_data_40GB.txt | nmax 5
+1242315355154252146241642
+152451425254542541542512
+1545421542542151425214
+4324324235545245242
+...
+```
 
-Or install it yourself as:
+## Техническое задание ##
 
-    $ gem install nmax
+### Напишите скрипт nmax, который делает следующее: ###
++ читает из входящего потока текстовые данные;
++ по завершении ввода выводит n самых больших целых чисел, встретившихся в полученных текстовых данных.
 
-## Usage
+### Дополнительные указания: ###
++ числом считается любая непрерывная последовательность цифр в тексте;
++ известно, что чисел длиннее 1000 цифр во входных данных нет;
++ число n должно быть единственным параметром скрипта;
++ код должен быть покрыт тестами;
++ код должен быть оформлен в виде гема (содержащего исполняемый файл, код модулей и т.д.);
++ плюсом является размещение на Github и интеграция с Travis CI.
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nmax.
-
+### Пример запуска: ###
+```
+  $ cat sample_data_40GB.txt | nmax 10000
+```
